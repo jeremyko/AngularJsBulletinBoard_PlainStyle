@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html ng-app="myBulletinBoardApp" >
+
+<head>
+    <meta charset="utf-8">
+    <title>Simple AngularJS Bulletin Board</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+
+    <!-- simple_angularjs_bulletin_board -->
+
+    <script src="routings/routings.js"></script>
+    <script src="pagingDirective/pagingDirective.js"></script>
+    <script src="globalService/globalService.js"></script>
+    <script src="main.js"></script>
+    <script src="msgList/list.js"></script>
+    <script src="msgView/view.js"></script>
+    <script src="msgEdit/edit.js"></script>
+    <script src="msgWrite/write.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+    <h2><span class="label label-primary">Simple AngularJS Bulletin Board</span></h2>
+
+    <div ng-view></div>
+</div>
+
+</body>
+</html>
+

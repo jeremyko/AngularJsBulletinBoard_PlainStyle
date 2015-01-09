@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-lg-10">
+        <form>
+            <table class="table">
+                <tr>
+                    <td width="70" align="right"><strong>user  </strong></td>
+                    <td><input type="text" readonly class="form-control" id="user"  ng-model="formData.user"></td>
+                </tr>
+                <tr>
+                    <td align="right"><strong>title  </strong></td>
+                    <td><input type="text" id="title" maxlength="150" class="form-control"  ng-model="formData.title" /></td>
+                </tr>
+                <tr>
+                    <td align="right"><strong>contents  </strong></td>
+                    <td><textarea id="detailedContents" class="form-control" rows="10"  ng-model="formData.contents"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right">
+                        <button class="btn btn-primary btn-sm" ng-click="GoToPage()">
+                            <span class="glyphicon  glyphicon-th-list"></span>  Back
+                        </button>
+                        <button type="submit" class="btn btn-primary btn-sm" ng-click="UpdateGuestMsg()">
+                            <span class="glyphicon  glyphicon-ok"></span>  Save
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>

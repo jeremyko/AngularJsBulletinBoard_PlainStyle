@@ -1,0 +1,11 @@
+
+<ul class="pagination pagination-sm" style="margin: 0;" ng-if="1 < totalPages">
+    <li ng-class="{disabled: disabledFirst}"><a href="" ng-click="moveToFirstPage()">First</a></li>
+    <li ng-class="{disabled: disabledPrevious}"><a href="" ng-click="moveToPreviousPage()">Previous</a></li>
+    <li ng-repeat="page in pageSetArray" ng-class="{active: activeIndexAry[ $index ], disabled: disabledIndexAry[ $index ]}">
+        <a href="" ng-click="pageChanged(page)">{{page}}</a>
+    </li>
+    <li ng-class="{disabled: disabledNext}"><a href="" ng-click="moveToNextPage()">Next</a></li>
+    <li ng-class="{disabled: disabledLast}"><a href="" ng-click="moveToLastPage()">Last</a></li>
+
+</ul>

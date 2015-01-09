@@ -1,0 +1,97 @@
+<!--<div   style="text-align: right;">총게시물 {{totalCount}}건</div>-->
+
+<div class="panel panel-default">
+
+    <table class="table table-hover table-condensed" >
+        <thead>
+        <tr>
+            <th width=20>#</th>
+            <th width=120>Title</th>
+            <th width=50>User</th>
+            <th width=70>Reg Date</th>
+            <th width=20>Hits</th>
+        </tr>
+        </thead>
+
+       <tbody>
+        <tr ng-repeat="msg in guestMsgs">
+            <td width=20> {{listIndexAry[ $index ] }}</td>
+            <td width=120>
+                <a href="#/view/{{msg._id}}">{{msg.title}}</a>
+            </td>
+
+            <td width=50>{{msg.user}}</td>
+            <td width=70><small>{{msg.reg_date}}</small></td>
+            <td width=20><span class="badge">{{msg.hits}}</span></td>
+
+        </tr>
+        <tr ng-show="!guestMsgs.length">
+            <td colspan="6" style="text-align :center">
+                <span class="text-warning">No data exists.</span>
+            </td>
+        </tr>
+       </tbody>
+    </table>
+
+
+
+
+</div>
+
+<div class="pull-left">
+    <table>
+        <tr>
+            <td>
+                <my-pagination-directive max-visible-pages="5"
+                                         count-all-api-url="apis/countAll"
+                                         >
+                </my-pagination-directive>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="pull-right">
+    <table>
+        <tr>
+            <td>
+                <button class="btn btn-primary btn-sm" style="margin: 0;" ng-click="GoToUrl('/write')">
+                    <span class="glyphicon glyphicon-pencil"></span> Write
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!--
+<div class="pull-left">
+<table>
+    <tr>
+        <td>
+            <my-pagination-directive max-visible-pages="5"
+                                     count-all-api-url="apis/countAll">
+            </my-pagination-directive>
+        </td>
+    </tr>
+</table>
+</div>
+
+<div class="pull-right">
+<table>
+    <tr>
+
+        <td>
+            <button class="btn btn-primary btn-sm" style="margin: 0;" ng-click="GoToUrl('/write')">
+                <span class="glyphicon glyphicon-pencil"></span> Write
+            </button>
+        </td>
+    </tr>
+</table>
+</div>
+-->
+
+
+
+
+
+

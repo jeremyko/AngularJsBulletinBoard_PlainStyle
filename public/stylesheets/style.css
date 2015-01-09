@@ -1,0 +1,16 @@
+a {
+  color: #00B7FF;
+}
+
+input[type="text"] {
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+/*
+.ng-scope  {
+    border: 1px solid red;
+    margin: 3px;
+}
+*/
